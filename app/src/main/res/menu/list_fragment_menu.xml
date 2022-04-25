@@ -16,10 +16,21 @@
             <menu>
                 <item
                     android:id="@+id/menuPriorityHigh"
+                    android:title="@string/high_priority">
+                </item>
+                <item
+                    android:id="@+id/menuPriorityLow"
+                    android:title="@string/low_priority">
+                </item>
             </menu>
         </item>
     </group>
 
+
+    <item
+        android:id="@+id/menuDeleteAll"
+        android:title="@string/delete_all"
+        app:showAsAction="never"/>
 
 
 </menu>

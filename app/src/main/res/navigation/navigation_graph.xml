@@ -11,10 +11,10 @@
         android:label="To Do List"
         tools:layout="@layout/fragment_recycler_view_list" >
         <action
-            android:id="@+id/action_recyclerViewListFragment_to_addItemFragment2"
+            android:id="@+id/action_recyclerViewListFragment_to_addItemFragment"
             app:destination="@id/addItemFragment" />
         <action
-            android:id="@+id/action_recyclerViewListFragment_to_updateFragment2"
+            android:id="@+id/action_recyclerViewListFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
     </fragment>
     <fragment
@@ -23,7 +23,7 @@
         android:label="Add Item"
         tools:layout="@layout/fragment_add_item" >
         <action
-            android:id="@+id/action_addItemFragment_to_recyclerViewListFragment2"
+            android:id="@+id/action_addItemFragment_to_recyclerViewListFragment"
             app:destination="@id/recyclerViewListFragment" />
     </fragment>
     <fragment
@@ -32,7 +32,7 @@
         android:label="Update Item"
         tools:layout="@layout/fragment_update" >
         <action
-            android:id="@+id/action_updateFragment_to_recyclerViewListFragment2"
+            android:id="@+id/action_updateFragment_to_recyclerViewListFragment"
             app:destination="@id/recyclerViewListFragment" />
     </fragment>
 </navigation>
