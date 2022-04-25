@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.todolistapp.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RecyclerViewListFragment : Fragment() {
 
@@ -14,7 +16,14 @@ class RecyclerViewListFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recycler_view_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_recycler_view_list, container, false)
+
+        val floatingActionButton = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        floatingActionButton.setOnClickListener{
+            findNavController().navigate(R.id.action_recyclerViewListFragment_to_addItemFragment2)
+        }
+
+        return view
     }
 
 }
