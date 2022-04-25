@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/recyclerViewListFragment">
+
+    <fragment
+        android:id="@+id/recyclerViewListFragment"
+        android:name="com.example.todolistapp.fragments.list.RecyclerViewListFragment"
+        android:label="fragment_recycler_view_list"
+        tools:layout="@layout/fragment_recycler_view_list" >
+        <action
+            android:id="@+id/action_recyclerViewListFragment_to_addItemFragment2"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_recyclerViewListFragment_to_updateFragment2"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.todolistapp.fragments.add.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/action_addItemFragment_to_recyclerViewListFragment2"
+            app:destination="@id/recyclerViewListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.todolistapp.fragments.update.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_recyclerViewListFragment2"
+            app:destination="@id/recyclerViewListFragment" />
+    </fragment>
+</navigation>
