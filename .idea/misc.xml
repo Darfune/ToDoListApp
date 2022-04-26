@@ -9,7 +9,9 @@
         <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/drawable/ic_search.xml" value="0.2225" />
         <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/layout/fragment_recycler_view_list.xml" value="0.25" />
+        <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/menu/add_fragment_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/menu/list_fragment_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android Projects/Kotlin/ToDoListApp/app/src/main/res/menu/update_fragment_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

@@ -12,6 +12,9 @@
     <string name="medium_priority">Medium Priority</string>
     <string name="low_priority">Low Priority</string>
     <string name="delete_all">Delete All</string>
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
 
     <string-array name="priorities">
         <item>High Priority</item>
