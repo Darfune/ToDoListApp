@@ -8,7 +8,7 @@ import com.example.todolistapp.data.models.ToDoData
 @TypeConverters(Converter::class)
 abstract class ToDoDatabase: RoomDatabase() {
 
-    abstract fun ToDoDao(): ToDoDao
+    abstract fun toDoDao(): ToDoDao
 
     companion object {
 
