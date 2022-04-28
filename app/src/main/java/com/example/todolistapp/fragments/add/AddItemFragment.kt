@@ -8,16 +8,19 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.todolistapp.R
 import com.example.todolistapp.data.models.Priority
 import com.example.todolistapp.data.models.ToDoData
 import com.example.todolistapp.data.viewmodel.ToDoViewModel
+import com.example.todolistapp.fragments.SharedViewModel
 
 class AddItemFragment : Fragment() {
 
 
     private val toDoViewModel: ToDoViewModel by viewModels()
+    private val sharedViewModel: SharedViewModel by viewModels()
 
     private var titleEditText: EditText? = null
     private var prioritySpinner: Spinner? = null
@@ -55,13 +58,13 @@ class AddItemFragment : Fragment() {
         val priority = prioritySpinner?.selectedItem.toString()
         val description = descriptionEditText?.text.toString()
 
-        val validation = verifyDataFromUser(title,description)
+        val validation = sharedViewModel.verifyDataFromUser(title,description)
 
         if (validation){
             val newData = ToDoData(
                 0,
                 title,
-                parsePriority(priority),
+                sharedViewModel.parsePriority(priority),
                 description
             )
             toDoViewModel.insertData(newData)
@@ -70,20 +73,6 @@ class AddItemFragment : Fragment() {
         }
     }
 
-    private fun verifyDataFromUser(title: String, description: String): Boolean{
-        return if(TextUtils.isEmpty(title) || TextUtils.isEmpty(description)){
-            false
-        }
-        else !(title.isEmpty() || description.isEmpty())
-    }
 
-    private fun parsePriority(priority: String): Priority{
-        return when(priority){
-            "High Priority" -> {Priority.HIGH}
-            "Medium Priority" -> {Priority.MEDIUM}
-            "Low Priority" -> {Priority.LOW}
-            else -> Priority.LOW
-        }
-    }
 
 }
