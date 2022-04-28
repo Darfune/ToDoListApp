@@ -38,6 +38,8 @@ class AddItemFragment : Fragment() {
         descriptionEditText = view.findViewById<EditText>(R.id.descriptionEditText)
 
         setHasOptionsMenu(true)
+        
+        prioritySpinner?.onItemSelectedListener = sharedViewModel.listener
 
         return view
     }
