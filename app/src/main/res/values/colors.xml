@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primaryColor">#263238</color>
-    <color name="darkGey">#4f5b62</color>
+    <color name="darkGrey">#4f5b62</color>
     <color name="primaryDarkColor">#000a12</color>
     <color name="secondaryColor">#536dfe</color>
     <color name="secondaryLightColor">#8f9bff</color>
